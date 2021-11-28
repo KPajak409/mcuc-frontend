@@ -1,0 +1,106 @@
+.first-crypto {
+  grid-column: 4 / 7;
+  grid-row: 2;
+  margin-right: 25px;
+}
+.second-crypto {
+  grid-column: 7 / 10;
+  grid-row: 2;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.my-balance {
+  grid-column: 10 / 13;
+  grid-row: 2;
+  margin-left: 25px;
+}
+.my-coins {
+  grid-column: 4 / 9;
+  grid-row: 4;
+  margin-right: 60px;
+}
+.recent-transaction {
+  grid-column: 8 / 13;
+  grid-row: 4;
+  margin-left: 60px;
+}
+.wallet {
+  grid-column: 4 / 13;
+  grid-row: 2/4;
+  min-height: 600px;
+}
+.small-square {
+  img {
+    display: block;
+    margin: 0;
+    max-height: 64px;
+    position: absolute;
+    top: -20%;
+    left: 33%;
+  }
+  p {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    color: rgba(139, 255, 85, 1);
+  }
+  p ~ p {
+    color: black;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+  }
+}
+
+.big-square {
+  min-height: 398px;
+
+  > div {
+    background-color: black;
+    margin-top: 20px;
+    height: 3px;
+  }
+
+  > ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0px;
+    text-align: right;
+    font-size: 0.75em;
+    color: black;
+    font-weight: 300;
+    border-style: solid;
+    border-image: radial-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0)) 1;
+    border-width: 0 0 2px 0;
+    padding-bottom: 15px;
+
+    div {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin-left: 10px;
+      }
+    }
+
+    .transaction-details {
+      flex-direction: column;
+      align-items: flex-end;
+      color: rgba(139, 255, 85, 1);
+      font-weight: 600;
+
+      p ~ p {
+        font-size: 0.7em;
+        color: black;
+        font-weight: 300;
+      }
+    }
+  }
+
+  img {
+    max-height: 32px;
+  }
+}

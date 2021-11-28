@@ -1,0 +1,22 @@
+@media (max-width: 920px) {
+  .big-square > ul li {
+    font-size: 0.6em;
+  }
+  .small-square p {
+    font-size: 0.8em;
+  }
+  .first-crypto,
+  .second-crypto,
+  .my-balance {
+    margin: 0 10px;
+  }
+  .my-coins {
+    margin: 0 40px 0 10px;
+  }
+  .recent-transaction {
+    margin: 0 10px 0 40px;
+  }
+  .menu {
+    font-size: 0.9em;
+  }
+}
