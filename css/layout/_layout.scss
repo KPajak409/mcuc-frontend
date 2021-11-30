@@ -11,20 +11,22 @@ body {
   padding: 20px;
   font-size: 10px;
   font-family: "Source Sans Pro", sans-serif;
+  position: relative;
 }
 
 .wrapper {
   max-width: 1000px;
-  max-height: 1200px;
+  max-height: 800px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
   height: 100%;
   width: 100%;
   margin: auto;
-  display: grid;
+  display: flex;
+  flex-direction: row;
   border-radius: 4%;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  justify-content: end;
-  grid-template-rows: 175px 1fr 30px 3fr 40px;
-  --column-gap: 40px;
   background-color: rgba(0, 0, 0, 0.15);
   * {
     border-radius: 30px;
@@ -43,7 +45,6 @@ section {
   font-size: 24px;
   font-weight: 600;
   position: relative;
-  margin: 0 40px;
   -webkit-box-shadow: 6px 5px 29px -8px rgba(66, 68, 90, 1);
   -moz-box-shadow: 6px 5px 29px -8px rgba(66, 68, 90, 1);
   box-shadow: 6px 5px 29px -8px rgba(66, 68, 90, 1);

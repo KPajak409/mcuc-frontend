@@ -1,34 +1,56 @@
-.first-crypto {
-  grid-column: 4 / 7;
-  grid-row: 2;
-  margin-right: 25px;
+.column {
+  flex-direction: column;
+  width: 100%;
+
+  .first-row,
+  .second-row,
+  .third-row {
+    display: flex;
+  }
 }
-.second-crypto {
-  grid-column: 7 / 10;
-  grid-row: 2;
-  margin-right: 30px;
-  margin-left: 30px;
+
+.first-row {
+  justify-content: flex-end;
+
+  .user-info {
+    margin-right: 10px;
+  }
 }
-.my-balance {
-  grid-column: 10 / 13;
-  grid-row: 2;
-  margin-left: 25px;
+
+.second-row {
+  justify-content: space-evenly;
+  margin: 40px 0 30px 0;
+  .first-crypto {
+    order: 1;
+    width: 30%;
+  }
+
+  .second-crypto {
+    order: 2;
+    width: 30%;
+  }
+
+  .my-balance {
+    order: 3;
+    width: 30%;
+  }
 }
-.my-coins {
-  grid-column: 4 / 9;
-  grid-row: 4;
-  margin-right: 60px;
+
+.third-row {
+  justify-content: space-around;
+
+  .my-coins {
+    flex-wrap: wrap;
+    order: 4;
+    width: 45%;
+  }
+  .recent-transaction {
+    flex-wrap: wrap;
+    order: 5;
+    width: 45%;
+  }
 }
-.recent-transaction {
-  grid-column: 8 / 13;
-  grid-row: 4;
-  margin-left: 60px;
-}
-.wallet {
-  grid-column: 4 / 13;
-  grid-row: 2/4;
-  min-height: 600px;
-}
+
 .small-square {
   img {
     display: block;

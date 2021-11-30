@@ -15,12 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="wrapper">
-      
+    <div class="wrapper">     
       <nav>
         <img src="#" alt="logo">
         <ul class="menu">
-          <li><a href="#"><i class="fa fa-home icon"></i>Dashboard</a></li>
+          <li><a href="index.html"><i class="fa fa-home icon"></i>Dashboard</a></li>
           <li><a href="#"><i class="fa fa-poll icon"></i>Market</a></li>
           <li><a href="#"><i class="fa fa-user icon"></i>Profile</a></li>
           <li></i><a href="wallet.html"><i class="fa fa-wallet icon"></i>Wallet</a></li>
@@ -30,12 +29,16 @@
           <li><a href="#"><i class="fa fa-sign-out-alt icon"></i>Logout</a></li>
         </ul>
       </nav>
-      <div class="user">
-        <p>Hello, Jeff!</p>
-        <p>Mon, 25/10/2021 3:50am</p>
+      <div class="column">
+      <div class="user first-row">
+        <div class="user-info">
+          <p>Hello, Jeff!</p>
+          <p>Mon, 25/10/2021 3:50am</p>
+        </div>
+         <img class="avatar" src="img/avatar.png">
       </div> 
-      <img class="avatar" src="img/avatar.png">
-      
+     
+      <div class="second-row">
       <section class="first-crypto small-square">
         <img src="img/btc_cryptocurrencies_icon_188406.png">
         <p>+5,87%/<span>24h</span></p>
@@ -53,6 +56,8 @@
         <p>+5%<span>24h</span></p>
         <p>60 223$</p>
       </section>
+      </div>
+      <div class="third-row">
       <section class="my-coins big-square">
         <p>My coins</p>
         <div></div>
@@ -92,6 +97,8 @@
           </li>
         </ul>
       </section>
+      </div>
+      </div>
     </div>
   </body>
 </html>
