@@ -4,6 +4,9 @@
   }
 }
 
+.percent {
+  text-shadow: 0 0 4px black;
+}
 .wallet {
   flex: 1;
   margin: 10px;
@@ -34,6 +37,7 @@
         flex-basis: 0;
         font-weight: 600;
         white-space: normal;
+        text-shadow: 0 0 2px white;
       }
       td {
         display: flex;
@@ -43,9 +47,9 @@
         flex-basis: 0;
         min-width: 0px;
         padding: 1em 0.2em;
-        font-weight: normal;
-        font-size: 0.8em;
-        color: white;
+        font-weight: 600;
+        font-size: 0.9em;
+        color: black;
         word-break: break-word;
         overflow: hidden;
         text-overflow: ellipsis;
