@@ -9,12 +9,12 @@ body {
   min-width: 800px;
   height: 100vh;
   width: 100vw;
-  background-image: url("../img/unknown2.png");
+  background-image: url("../img/unknown.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: screen;
-  padding: 20px;
+  --padding: 20px;
   font-size: 10px;
   font-family: "Source Sans Pro", sans-serif;
   position: relative;
@@ -234,7 +234,7 @@ nav {
   color: white;
 }
 
-.second-row.wallet {
+.second-row.coins-table {
   height: 80%;
 }
 
@@ -242,31 +242,31 @@ nav {
   text-shadow: 0 0 4px black;
 }
 
-.wallet {
+.coins-table {
   flex: 1;
   margin: 10px;
 }
-.wallet table tr:last-child {
+.coins-table table tr:last-child {
   border: none;
 }
-.wallet table {
+.coins-table table {
   display: flex;
   flex-flow: column nowrap;
   flex: 1 1 auto;
   height: 100%;
   font-size: 0.7em;
 }
-.wallet table tr:first-of-type {
+.coins-table table tr:first-of-type {
   padding-bottom: 20px;
 }
-.wallet table tr {
+.coins-table table tr {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
   border-bottom: 1px solid #000;
   border-radius: 0px;
 }
-.wallet table tr th {
+.coins-table table tr th {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -276,7 +276,7 @@ nav {
   white-space: normal;
   text-shadow: 0 0 2px white;
 }
-.wallet table tr td {
+.coins-table table tr td {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -292,21 +292,34 @@ nav {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.wallet table tr th:first-of-type,
-.wallet table tr td:first-of-type {
+.coins-table table tr th:first-of-type,
+.coins-table table tr td:first-of-type {
   flex-grow: 1.5;
 }
-.wallet table tr th:nth-child(6),
-.wallet table tr td:nth-child(6) {
-  flex-grow: 1.3;
-}
-.wallet table tr th:nth-child(3),
-.wallet table tr th:nth-child(4),
-.wallet table tr th:nth-child(5),
-.wallet table tr td:nth-child(3),
-.wallet table tr td:nth-child(4),
-.wallet table tr td:nth-child(5) {
+.coins-table table tr th:nth-child(3),
+.coins-table table tr th:nth-child(4),
+.coins-table table tr th:nth-child(5),
+.coins-table table tr td:nth-child(3),
+.coins-table table tr td:nth-child(4),
+.coins-table table tr td:nth-child(5) {
   flex-grow: 0.7;
+}
+
+.second-row.transactions-table {
+  height: 80%;
+}
+
+section.transactions-table table tr th:nth-child(2),
+section.transactions-table table tr td:nth-child(2) {
+  flex-grow: 0.8;
+}
+section.transactions-table table tr th:nth-child(3),
+section.transactions-table table tr td:nth-child(3) {
+  flex-grow: 1;
+}
+section.transactions-table table tr th:nth-child(4),
+section.transactions-table table tr td:nth-child(4) {
+  flex-grow: 1.3;
 }
 
 @media (max-width: 920px) {
@@ -331,6 +344,179 @@ nav {
   .menu {
     font-size: 0.9em;
   }
+}
+.landing-page {
+  background-image: url("../img/moon-space.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: screen;
+  height: 100vh;
+  width: 100vw;
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+  overflow-y: scroll;
+}
+
+.landing-page::-webkit-scrollbar {
+  display: none;
+  /* for Chrome, Safari, and Opera */
+}
+
+.landing-page-menu {
+  position: fixed;
+  height: 40px;
+  width: 100vw;
+  background-color: black;
+  font-family: "Press Start 2P";
+  letter-spacing: -1px;
+}
+.landing-page-menu ul .logo {
+  position: fixed;
+  top: 10px;
+  left: 30px;
+}
+.landing-page-menu ul .login {
+  position: fixed;
+  top: 10px;
+  right: 250px;
+}
+.landing-page-menu ul .register {
+  position: fixed;
+  top: 10px;
+  right: 100px;
+  color: red;
+}
+.landing-page-menu ul li a {
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.start {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 90%;
+  width: 90%;
+  margin: 0;
+}
+.start p:first-of-type {
+  font-size: 6em;
+  color: red;
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+.start p:nth-child(2) {
+  font-size: 6em;
+  color: white;
+  grid-column: 2/6;
+  grid-row: 5/6;
+}
+.start p:nth-child(3) {
+  font-size: 2em;
+  color: white;
+  grid-column: 2/6;
+  grid-row: 6/7;
+}
+.start button {
+  background-color: transparent;
+  border: 1px solid #b30000;
+  border-radius: 5px;
+  color: #b30000;
+  font-size: 3em;
+  margin: 5px 50px 5px 0;
+  grid-column: 2/3;
+  grid-row: 7/8;
+  transition: 0.5s;
+}
+.start button:hover {
+  opacity: 0.8;
+  background-color: #9b0000;
+  color: white;
+}
+
+.about {
+  height: 30vh;
+  width: 100vw;
+}
+.about p {
+  margin: 100px 0 0 0;
+  font-size: 4em;
+  color: #747474;
+  text-align: center;
+}
+.about div.line {
+  border: 1px solid red;
+  height: 2px;
+  width: 50px;
+  margin: 0 auto 50px auto;
+}
+.about .about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+.about .about-content div {
+  display: flex;
+  flex-direction: column;
+  font-size: 3em;
+  width: 25%;
+  text-align: center;
+}
+.about .about-content div p {
+  margin: 0;
+  font-size: 0.5em;
+}
+
+div.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-grow: 1;
+  width: 100vw;
+  height: 50vh;
+  background: #4b4b4b;
+  background: linear-gradient(149deg, #4b4b4b 0%, black 100%);
+}
+div.contact .flex-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  background-color: white;
+  margin: 15px 0;
+  border-radius: 20px;
+}
+div.contact .flex-form p {
+  color: black;
+  font-size: 3em;
+  text-align: left;
+}
+div.contact .flex-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 65%;
+}
+div.contact .flex-form form input {
+  padding: 5px 0;
+  margin: 30px 0;
+}
+div.contact .flex-form button {
+  margin-bottom: 20px;
+  background-color: #9b0000;
+  width: 65%;
+  color: white;
+  padding: 5px 0;
+  border: 2px solid #9b0000;
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 .second-row {
-  &.wallet {
+  &.coins-table {
     height: 80%;
   }
 }
@@ -7,7 +7,7 @@
 .percent {
   text-shadow: 0 0 4px black;
 }
-.wallet {
+.coins-table {
   flex: 1;
   margin: 10px;
   table tr:last-child {
@@ -59,10 +59,7 @@
       td:first-of-type {
         flex-grow: 1.5;
       }
-      th:nth-child(6),
-      td:nth-child(6) {
-        flex-grow: 1.3;
-      }
+
       th:nth-child(3),
       th:nth-child(4),
       th:nth-child(5),
